@@ -17,6 +17,10 @@ print('Servidor Echo escutando em localhost:5000')
 
 while True:
     print('\nAguardando conexão...')
+    tecla = input()
+    # Se o "enter" for pressionado o programa é encerrado
+    if tecla == "":
+        quit()
     conexao, endereco = servidor.accept()
     print(f'Conectado com {endereco} em {datetime.today()}')
     
