@@ -2,16 +2,17 @@
 
 ## Checklist inicial
 
-- [ ] fork desse repositório
-- [ ] criar um arquivo `/relatorio.md` para relatar o que se pede abaixo
+- [X] fork desse repositório
+- [X] criar um arquivo `/relatorio.md` para relatar o que se pede abaixo
 
 ```md
 # Relato da atividade de comunicação entre processo usando sockets
 
 ## Informações gerais
+
 - **disciplina**: Sistemas operacionais
 - **semestre letivo**: 2025.2
-- **aluno**: FIXME seu nome
+- **aluno**: Eduardo Medeiros de Sousa Aguiar
 
 ## Parte 1 — 1 servidor e 1 cliente (bloqueante)
 FIXME seu relato
