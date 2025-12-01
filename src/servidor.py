@@ -7,6 +7,7 @@ Pode processar múltiplas conexões sequencialmente.
 """
 
 import socket
+from datetime import datetime
 
 servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 servidor.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -17,7 +18,7 @@ print('Servidor Echo escutando em localhost:5000')
 while True:
     print('\nAguardando conexão...')
     conexao, endereco = servidor.accept()
-    print(f'Conectado com {endereco}')
+    print(f'Conectado com {endereco} em {datetime.today()}')
     
     try:
         while True:
@@ -25,7 +26,7 @@ while True:
             dados = conexao.recv(1024)
             
             if not dados:
-                print('Cliente desconectou')
+                print(f'Cliente desconectou em {datetime.today()}')
                 break
                 
             mensagem = dados.decode('utf-8')
